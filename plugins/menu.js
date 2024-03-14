@@ -1,5 +1,6 @@
 const events = require("../lib/event");
 const { command, isPrivate, tiny, serif_B, clockString } = require("../lib");
+const config = require("../config");
 const { OWNER_NAME, BOT_NAME, BOT_INFO } = require("../config");
 const { hostname, uptime } = require("os");
 
@@ -34,10 +35,10 @@ Description: ${i.desc}\`\`\``);
       let menu = `╔════════════╗ \n  *SUPERIOR* \n  ╚════════════╝
 ╔══════════════╗
 ╠» Owner : ${config.OWNER_NAME}
-╠» mode :${config.WORK_TYPE.toLowerCase()}
+╠» mode :${congig.WORK_TYPE.toLowerCase()}
 ╠» Date : ${date}
 ╠» Time : ${time}
-╠» Commands :${commands.length}
+╠» Commands :${plugins.commands.length}
 ╚══════════════╝\n${readMore}\n`;
 
 menu +=`\n`;
