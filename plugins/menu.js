@@ -72,7 +72,7 @@ menu += `\n`;
         menu += `\n`;
         menu += `\n`;
       });
-      menu += `𝘊𝘳𝘦𝘢𝘵𝘦𝘥 𝘣𝘺 *𝘚𝘜𝘗𝘌𝘙𝘐𝘖𝘙*`;
+      menu += `𝘊𝘳𝘦𝘢𝘵𝘦𝘥 𝘣𝘺 *𝘚𝘜𝘗𝘌𝘙𝘐𝘖𝘙.*`;
       let penu = tiny(menu)
       let img = config.BOT_INFO.split(';')[2]
       return await message.sendFromUrl(img, {fileLength: "5555544444", gifPlayback: true, caption: (penu)}, {quoted: message })
