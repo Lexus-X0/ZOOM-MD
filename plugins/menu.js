@@ -4,6 +4,7 @@ const config = require("../config");
 const { OWNER_NAME, BOT_NAME, BOT_INFO } = require("../config");
 const { PluginDB, installPlugin } = require("../lib/database/plugins");
 const { hostname, uptime } = require("os");
+const readMore = more.repeat(4001);
 
   command(
     {
