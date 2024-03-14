@@ -227,17 +227,15 @@ Description: ${i.desc}\`\`\``);
         .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
         .split(",");
 
-      let menu = `\n╭━━━〔 ${BOT_INFO.split(";")[0]} 〕━━━┈
-    ╭──────────────
-  〄 │  *OWNER*:  ${BOT_INFO.split(";")[1]}
-  〄 │  *USER*: ${message.pushName}
-  〄 │  *DATE*: ${date}
-  〄 │  *TIME*: ${time}
-  〄 │  *COMMANDS*: ${plugins.commands.length}
-  〄 │  *MODE*: ${config.WORK_TYPE}
-  〄 │  *VERSION*: ${require("../package.json").version}
-    ╰──────────────
-╰━━━━━━━━━━━━━━━\n`
+      let menu = `╔═════════════════╗
+                *SUPERIOR*\n╚═════════════════╝
+╔═════════════════╗
+╠» Prefix : ${m.prefix}
+╠» Uptime : ${await m.uptime()}
+╠» Date : ${date}
+╠» Time : ${time}
+╠» Commands : ${plugins.commands.length}
+╚═════════════════╝ \n${readMore}\n`
 
 menu +=`╭───────────┈⊷\n`;
 
@@ -259,18 +257,18 @@ menu +=`╭───────────┈⊷\n`;
       });
       cmnd.sort();
       category.sort().forEach((cmmd) => {
-        menu += `│  ╭─────────────┈⊷`;
-        menu += `\n│  │ 「 *${cmmd.toUpperCase()}* 」`;
-        menu += `\n│  ╰┬────────────┈⊷`
+        menu += `╔══════════════╗`;
+        menu += `\n╠═ ⪼ 「 *${cmmd.toUpperCase()}* 」`;
+        menu += `\n╚══════════════╝`
 menu += `\n   ╭┴────────────┈⊷`;
         let comad = cmnd.filter(({ type }) => type == cmmd);
         comad.forEach(({ cmd }) => {
-          menu += `\n│   ||•➛   ${cmd.trim()}`;
+          menu += `\n ➪ ${cmd.trim()}`;
         });
-        menu += `\n│  ╰─────────────┈⊷`;
+        menu += `\n`;
         menu += `\n`;
       });
-      menu += `╰─────────────┈⊷`;
+      menu += `\n`;
       let penu = tiny(menu)
       let img = config.BOT_INFO.split(';')[2]
       return await message.sendFromUrl(img, {fileLength: "5555544444", gifPlayback: true, caption: (penu)}, {quoted: message })
