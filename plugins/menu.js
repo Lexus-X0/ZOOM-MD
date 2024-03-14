@@ -35,7 +35,7 @@ Description: ${i.desc}\`\`\``);
       let menu = `╔════════════╗ \n  *SUPERIOR* \n  ╚════════════╝
 ╔══════════════╗
 ╠» Owner : ${config.OWNER_NAME}
-╠» mode :${congig.WORK_TYPE.toLowerCase()}
+╠» mode :${config.WORK_TYPE.toLowerCase()}
 ╠» Date : ${date}
 ╠» Time : ${time}
 ╠» Commands :${plugins.commands.length}
