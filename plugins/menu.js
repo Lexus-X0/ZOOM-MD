@@ -56,13 +56,13 @@ Description : ${i.desc}\`\`\``
       });
       cmnd.sort();
       category.sort().forEach((cmmd) => {
-        menu += `
-╔══════════════╗
-╠═ ⪼⦿- ${cmmd}--⦿
-╚══════════════╝;
+        menu += `╔══════════════╗`;
+        menu += `\n╠═ ⪼ 「 *${cmmd.toUpperCase()}* 」`;
+        menu += `\n╚══════════════╝`
+menu += `\n`;
         let comad = cmnd.filter(({ type }) => type == cmmd);
-        comad.forEach(({ cmd }, num) => {
-          menu += `\n  ||•➛   ${cmd.trim()}`;
+        comad.forEach(({ cmd }) => {
+          menu += `\n  ➪  ${cmd.trim()}`;
         });
         menu += `\n`;
       });
