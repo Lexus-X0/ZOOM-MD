@@ -38,7 +38,7 @@ command(
 var speed = end - start;
  
 await new Promise(t => setTimeout(t,0))
-         await message.client.sendMessage(message.jid,{text:`*𝙿𝚘𝚗𝚐* ㋚
+         await message.client.sendMessage(message.jid,{text:`*response* ㋚
 ${speed} *𝚖𝚜*` , edit: key});
 })
 
