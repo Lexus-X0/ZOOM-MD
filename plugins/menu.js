@@ -36,7 +36,7 @@ Description: ${i.desc}\`\`\``);
         .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
         .split(",");
 
-      let menu = `╔════════════╗ \n  *SUPERIOR* \n  ╚════════════╝
+      let menu = `╔════════════╗ \n    *SUPERIOR* \n ╚════════════╝
 ╔══════════════╗
 ╠» Owner : ${config.OWNER_NAME}
 ╠» mode :${config.WORK_TYPE.toLowerCase()}
@@ -65,8 +65,8 @@ menu +=`\n`;
       });
       cmnd.sort();
       category.sort().forEach((cmmd) => {
-        menu += `╔═════════════════╗`;
-        menu += `\n ╠═ ⪼ 「 *${cmmd.toUpperCase()}* 」`;
+        menu += `╔═══════════════╗`;
+        menu += `\n╠═ ⪼ 「 *${cmmd.toUpperCase()}* 」`;
         menu += `\n╚══════════════╝`
 menu += `\n`;
         let comad = cmnd.filter(({ type }) => type == cmmd);
