@@ -1,6 +1,7 @@
 const events = require("../lib/event");
 const { command, isPrivate, tiny, serif_B, clockString } = require("../lib");
 const config = require("../config");
+const plugins = require("../lib/event");
 const { OWNER_NAME, BOT_NAME, BOT_INFO } = require("../config");
 const { PluginDB, installPlugin } = require("../lib/database/plugins");
 const { hostname, uptime } = require("os");
