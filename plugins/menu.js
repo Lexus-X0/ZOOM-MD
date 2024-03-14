@@ -2,7 +2,7 @@ const events = require("../lib/event");
 const { command, isPrivate, tiny, serif_B, clockString } = require("../lib");
 const config = require("../config");
 const plugins = require("../lib/event");
-const { OWNER_NAME, BOT_NAME, BOT_INFO } = require("../config");
+const { HANDLERS, BOT_NAME, BOT_INFO } = require("../config");
 const { PluginDB, installPlugin } = require("../lib/database/plugins");
 const { hostname, uptime } = require("os");
 const more = String.fromCharCode(8206);
@@ -36,9 +36,9 @@ Description: ${i.desc}\`\`\``);
         .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
         .split(",");
 
-      let menu = `╔════════════╗ \n    *SUPERIOR* \n ╚════════════╝
+      let menu = `╔════════════╗ \n         *SUPERIOR* \n╚════════════╝
 ╔══════════════╗
-╠» Owner : ${config.OWNER_NAME}
+╠» Prefix : ${config.HANDLERS}
 ╠» mode :${config.WORK_TYPE.toLowerCase()}
 ╠» Date : ${date}
 ╠» Time : ${time}
@@ -65,7 +65,7 @@ menu +=`\n`;
       });
       cmnd.sort();
       category.sort().forEach((cmmd) => {
-        menu += `╔═══════════════╗`;
+        menu += `╔══════════════╗`;
         menu += `\n╠═ ⪼ 「 *${cmmd.toUpperCase()}* 」`;
         menu += `\n╚══════════════╝`
 menu += `\n`;
