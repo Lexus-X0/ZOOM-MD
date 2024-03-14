@@ -33,7 +33,7 @@ command(
     },
     async (message, match, client) => {
         const start = new Date().getTime();
-      let { key } = await message.sendMessage(`*𝙿𝚒𝚗𝚐 ㋞*`);
+      let { key } = await message.sendMessage(`*𝙿ong ㋞*`);
         const end = new Date().getTime();
 var speed = end - start;
  
