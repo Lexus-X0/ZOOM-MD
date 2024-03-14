@@ -39,7 +39,7 @@ Description: ${i.desc}\`\`\``);
 ╠» mode :${config.WORK_TYPE.toLowerCase()}
 ╠» Date : ${date}
 ╠» Time : ${time}
-╠» Commands :${plugins.commands.length}
+╠» Creator : Superior
 ╚══════════════╝\n${readMore}\n`;
 
 menu +=`\n`;
