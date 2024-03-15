@@ -25,6 +25,6 @@ mediaUrl: "",
 mediaType: 1,
 showAdAttribution: true,
 renderLargerThumbnail: false,
-thumbnailUrl: "https://i.imgur.com/Ou56ggv.jpeg" }} }, {quoted: message })
+thumbnailUrl: "https://i.imgur.com/UdydsAj.jpeg" }} }, {quoted: message })
     }
     );
