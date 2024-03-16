@@ -12,7 +12,7 @@ command(
         type: "downloader",
     },
     async (message, match) => {
-        if (!match) return await message.sendMessage("*_Need Song Name Or Url_*");
+        if (!match) return await message.reply("*_Need Song Name Or Url_*");
 var res = await axios.get(`https://api-viper-x.koyeb.app/api/song?name=${match}`)
 var song = res.data
 await message.client.sendMessage(message.jid, { text: `*_Downloading ${song.data.title}_*` },{ quoted: message})
