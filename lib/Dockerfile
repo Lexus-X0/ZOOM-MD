@@ -1,5 +1,18 @@
-FROM quay.io/toxic_kichux/whatskrizai:latest
-RUN git clone https://github.com/Lexus-XO/ZOOM-MD/root/ZOOM-MD
-WORKDIR /root/ZOOM-MD/
-RUN yarn install --network-concurrency 1
-CMD ["node", "index.js", "--max_old_space_size=2560"]
+FROM node:lts-buster
+
+RUN git clone https://github.com/Lexus-X0/ZOOM-MD/ /root/ZOOM-MD
+
+WORKDIR /root/ZOOM-MD
+
+RUN apt-get update && \
+  apt-get install -y \
+  ffmpeg \
+  imagemagick \
+  webp && \
+  apt-get upgrade -y && \
+  rm -rf /var/lib/apt/lists/*
+
+RUN npm install
+
+
+CMD ["node", "index.js"]
