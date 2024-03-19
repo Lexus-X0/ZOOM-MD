@@ -1,5 +1,5 @@
-FROM quay.io/loki-xer/jarvis-md:latest
-RUN git clone https://github.com/Lexus-XO/ZOOM-MD /root/bot/
-WORKDIR /root/bot/
+FROM quay.io/toxic_kichux/whatskrizai:latest
+RUN git clone https://github.com/Lexus-XO/ZOOM-MD/root/ZOOM-MD
+WORKDIR /root/ZOOM-MD/
 RUN yarn install --network-concurrency 1
-CMD ["npm", "start"]
+CMD ["node", "index.js", "--max_old_space_size=2560"]
